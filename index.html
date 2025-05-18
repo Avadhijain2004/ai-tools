@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free AI Tools Collection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #f9fafb;
+            --text: #1f2937;
+            --light-gray: #e5e7eb;
+            --dark-gray: #6b7280;
+            --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        
+        body {
+            background-color: #f3f4f6;
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, var(--primary), #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            color: var(--dark-gray);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .tool-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: 1px solid var(--light-gray);
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .card-image {
+            height: 160px;
+            background: linear-gradient(135deg, var(--primary), #8b5cf6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text);
+        }
+        
+        .card-description {
+            color: var(--dark-gray);
+            margin-bottom: 1.25rem;
+            font-size: 0.95rem;
+        }
+        
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid var(--light-gray);
+        }
+        
+        .card-button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .card-button:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .card-tag {
+            background-color: var(--secondary);
+            color: var(--primary-dark);
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem 0;
+            color: var(--dark-gray);
+            font-size: 0.875rem;
+            border-top: 1px solid var(--light-gray);
+        }
+        
+        .featured-section {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            padding: 3rem 1rem;
+            border-radius: 0.75rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .featured-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+        
+        .featured-description {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: var(--dark-gray);
+        }
+        
+        @media (max-width: 768px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Free AI Tools</div>
+            <p class="tagline">Enhance your productivity with our collection of free AI-powered tools</p>
+        </header>
+        
+        <div class="featured-section">
+            <h2 class="featured-title">Boost Your Productivity</h2>
+            <p class="featured-description">
+                Our free AI tools help you accomplish more in less time. From resume writing to content creation,
+                we've got you covered with powerful AI assistance.
+            </p>
+        </div>
+        
+        <div class="tools-grid">
+            <!-- Resume Enhancer Card -->
+            <div class="tool-card" onclick="location.href='resume-enhancer.html'">
+                <div class="card-image">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Resume Enhancer</h3>
+                    <p class="card-description">
+                        Transform your resume bullet points into powerful, achievement-oriented statements that impress recruiters.
+                    </p>
+                    <div class="card-footer">
+                        <span class="card-tag">Writing</span>
+                        <button class="card-button">Try Now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Text Summarizer Card -->
+            <div class="tool-card" onclick="location.href='text-summarizer.html'">
+                <div class="card-image" style="background: linear-gradient(135deg, #10b981, #059669);">
+                    <i class="fas fa-scroll"></i>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Text Summarizer</h3>
+                    <p class="card-description">
+                        Quickly condense long articles, papers, or documents into concise summaries while preserving key points.
+                    </p>
+                    <div class="card-footer">
+                        <span class="card-tag">Productivity</span>
+                        <button class="card-button">Try Now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cover Letter Generator Card -->
+            <div class="tool-card" onclick="location.href='cover-letter.html'">
+                <div class="card-image" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                    <i class="fas fa-envelope-open-text"></i>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Cover Letter Generator</h3>
+                    <p class="card-description">
+                        Create professional, tailored cover letters that match your resume and the job description.
+                    </p>
+                    <div class="card-footer">
+                        <span class="card-tag">Writing</span>
+                        <button class="card-button">Try Now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Grammar Checker Card -->
+            <div class="tool-card" onclick="location.href='grammar-checker.html'">
+                <div class="card-image" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
+                    <i class="fas fa-spell-check"></i>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Grammar Checker</h3>
+                    <p class="card-description">
+                        Improve your writing by detecting grammar, spelling, and punctuation errors with AI-powered suggestions.
+                    </p>
+                    <div class="card-footer">
+                        <span class="card-tag">Writing</span>
+                        <button class="card-button">Try Now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Code Explainer Card -->
+            <div class="tool-card" onclick="location.href='code-explainer.html'">
+                <div class="card-image" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Code Explainer</h3>
+                    <p class="card-description">
+                        Understand complex code snippets with plain English explanations. Perfect for learning and debugging.
+                    </p>
+                    <div class="card-footer">
+                        <span class="card-tag">Developer</span>
+                        <button class="card-button">Try Now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Content Rewriter Card -->
+            <div class="tool-card" onclick="location.href='content-rewriter.html'">
+                <div class="card-image" style="background: linear-gradient(135deg, #ec4899, #db2777);">
+                    <i class="fas fa-edit"></i>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Content Rewriter</h3>
+                    <p class="card-description">
+                        Rephrase sentences or paragraphs while maintaining the original meaning and improving clarity.
+                    </p>
+                    <div class="card-footer">
+                        <span class="card-tag">Writing</span>
+                        <button class="card-button">Try Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Powered by Hugging Face AI and OpenRouter | © 2023 Free AI Tools Collection</p>
+        </footer>
+    </div>
+</body>
+</html>
